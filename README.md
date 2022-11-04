@@ -1,3 +1,5 @@
 # movie-backend
 
-API up: npm run listen
+Launch db : npm run db:up
+
+Launch api : npm run listen
