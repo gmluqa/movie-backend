@@ -1,3 +1,7 @@
 node_modules
 package-lock.json
 .env
+
+# Rough sketches, may modify later
+db/planning
+db/dbPlanning.png
