@@ -5,7 +5,7 @@ const db = require('./db/db.js')
 const PORT = 3000;
 
 app.listen(PORT, () => {
-    console.log(`Running on localhost:${PORT}, \nWelcome to The Comfy Zone 😎`)
+    console.log(`Listening on ${process.env.DB_HOST}:${PORT}, \nWelcome to The Comfy Zone 😎`)
 
     db.sync({ force: true }).then(() => {
         console.log("Connected to database!")
