@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       ContentType: {
-        type: Sequelize.ENUM
+        type: Sequelize.ENUM("Movie", "Series")
       },
       Name: {
         type: Sequelize.STRING

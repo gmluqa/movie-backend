@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Product.init({
-    ContentType: DataTypes.ENUM,
+    ContentType: DataTypes.ENUM("Movie", "Series"),
     Name: DataTypes.STRING,
     Rating: DataTypes.FLOAT,
     Genre: DataTypes.STRING,
