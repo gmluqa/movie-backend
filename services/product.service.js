@@ -1,10 +1,10 @@
 const models = require('../models/index')
 
 const movieGetTopRated = async () => {
-    const resp = await models.Product.findAll({
+    const topRatedMovies = await models.Product.findAll({
         attributes: ["Name"]
     })
-    console.log(resp)
+    return topRatedMovies
 }
 
 module.exports = {
