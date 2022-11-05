@@ -1,8 +1,14 @@
+const { Op } = require("sequelize");
 const models = require('../models/index')
 
 const movieGetTopRated = async () => {
     const topRatedMovies = await models.Product.findAll({
-        attributes: ["Name"]
+        where: {
+            rating: {
+                [Op.gt]: 5
+            }
+        }
+
     })
     return topRatedMovies
 }
