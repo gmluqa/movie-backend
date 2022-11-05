@@ -1,0 +1,47 @@
+'use strict';
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert('Orders', [{
+      User_ID: 1,
+      Product_ID: 1,
+      CreatedAt: '1998-06-10 06:40:10',
+      UpdatedAt: '1998-06-10 06:40:10'
+    },
+    {
+      User_ID: 2,
+      Product_ID: 1,
+      CreatedAt: '1998-06-10 06:40:10',
+      UpdatedAt: '1998-06-10 06:40:10'
+    },
+    {
+      User_ID: 1,
+      Product_ID: 2,
+      CreatedAt: '1998-06-10 06:40:10',
+      UpdatedAt: '1998-06-10 06:40:10'
+    },
+    {
+      User_ID: 5,
+      Product_ID: 1,
+      CreatedAt: '1998-06-10 06:40:10',
+      UpdatedAt: '1998-06-10 06:40:10'
+    },
+    {
+      User_ID: 2,
+      Product_ID: 1,
+      CreatedAt: '1998-06-10 06:40:10',
+      UpdatedAt: '1998-06-10 06:40:10'
+    }], {});
+
+  },
+
+  async down(queryInterface, Sequelize) {
+    /**
+     * Add commands to revert seed here.
+     *
+     * Example:
+     * await queryInterface.bulkDelete('People', null, {});
+     */
+  }
+};
