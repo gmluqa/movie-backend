@@ -20,7 +20,7 @@ module.exports = {
         },
         allowNull: false
       },
-      Content_ID: {
+      Product_ID: {
         type: Sequelize.DataTypes.INTEGER,
         references: {
           model: {
