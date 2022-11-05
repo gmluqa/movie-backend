@@ -6,3 +6,4 @@ config/config.json
 # Rough sketches, may modify later
 db/planning
 db/dbPlanning.png
+db/mysqlplanning.sql
