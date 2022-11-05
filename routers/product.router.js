@@ -1,11 +1,12 @@
 const express = require("express");
 const productRouter = express.Router()
 
-// const {
+const {
+    movieGetTopRatedController
 
-// } = require("../controllers/")
+} = require("../controllers/product.controller.js")
 
-// productRouter.method("/path", controller)'
+productRouter.get("/topRated", movieGetTopRatedController)
 // productRouter.method("/path", controller)
 
 module.exports = productRouter

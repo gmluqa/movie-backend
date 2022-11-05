@@ -1,7 +1,7 @@
-const app = require("../app")
+const models = require('../models/index')
 
 const testerServiceOrder = () => {
-    return "helo"
+
 }
 
 module.exports = {

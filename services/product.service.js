@@ -1,8 +1,12 @@
+const models = require('../models/index')
 
-const testerServiceProduct = () => {
-    console.log("Success")
+const movieGetTopRated = async () => {
+    const resp = await models.Product.findAll({
+        attributes: ["Name"]
+    })
+    console.log(resp)
 }
 
 module.exports = {
-    testerServiceProduct
+    movieGetTopRated
 }

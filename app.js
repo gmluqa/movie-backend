@@ -9,8 +9,8 @@ const userRouter = require("./routers/user.router.js");
 
 // Middleware
 app.use(express.json())
-// app.use("/product", productRouter);
-app.use("/order", orderRouter);
+app.use("/product", productRouter);
+// app.use("/order", orderRouter);
 // app.use("/user", userRouter);
 
 module.exports = app

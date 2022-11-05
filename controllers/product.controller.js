@@ -1,12 +1,13 @@
 // Service dependencies 
-const {
-    testerServiceProduct
-} = require("../services/product.service.js")
 
-const testProductController = (req, res) => {
-    testerServiceProduct()
+const ProductModel = require("../models/product.js")
+
+const { movieGetTopRated } = require("../services/product.service.js")
+
+const movieGetTopRatedController = async (req, res) => {
+    movieGetTopRated()
 }
 
 module.exports = {
-    testProductController
+    movieGetTopRatedController
 }
