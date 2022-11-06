@@ -14,6 +14,16 @@ const movieGetTopRated = async () => {
     return topRatedMovies
 }
 
+const movieGetById = async (id) => {
+    const pickedMovie = await models.Product.findAll({
+        where: {
+            id: id,
+            ContentType: "Movie"
+        }
+    })
+    return pickedMovie;
+}
+
 module.exports = {
-    movieGetTopRated
+    movieGetTopRated, movieGetById
 }
