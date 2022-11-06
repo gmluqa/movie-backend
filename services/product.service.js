@@ -45,9 +45,23 @@ const moviesGetByGenre = async (genre) => {
     return moviesByGenre
 }
 
+const seriesGetTopRated = async () => {
+    const topRatedSeries = await models.Product.findAll({
+        where: {
+            rating: {
+                [Op.gt]: 6
+            },
+            ContentType: "Series"
+        }
+
+    })
+    return topRatedSeries
+}
+
 module.exports = {
     movieGetTopRated,
     movieGetById,
     movieGetByName,
-    moviesGetByGenre
+    moviesGetByGenre,
+    seriesGetTopRated
 }
