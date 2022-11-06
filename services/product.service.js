@@ -86,11 +86,20 @@ const seriesGetWithNextEpWeek = async () => {
     })
     for (i = 0; i < seriesNextEpsSoon.length; i++) {
         let loggedDateNextEp = seriesNextEpsSoon[i].NextEpDate
-        console.log(strtotime(loggedDateNextEp))
+        console.log(loggedDateNextEp)
         // TO:DO Make the next ep service work
     }
 }
 
+const seriesGetTheatrePass = async () => {
+    const seriesTheatrePass = await models.Product.findAll({
+        where: {
+            TheatrePass: true
+        },
+        ContentType: "Series"
+    })
+    return seriesTheatrePass
+}
 
 
 module.exports = {
@@ -101,5 +110,6 @@ module.exports = {
     seriesGetTopRated,
     seriesGetById,
     seriesGetByName,
-    seriesGetWithNextEpWeek
+    seriesGetWithNextEpWeek,
+    seriesGetTheatrePass
 }

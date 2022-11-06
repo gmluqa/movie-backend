@@ -9,8 +9,8 @@ const {
     seriesGetTopRatedController,
     seriesGetByIdController,
     seriesGetByNameController,
-    seriesGetWithNextEpWeekController
-
+    seriesGetWithNextEpWeekController,
+    seriesGetTheatrePassController
 } = require("../controllers/product.controller.js")
 
 // Movie endpoints
@@ -24,6 +24,7 @@ productRouter.get("/series/getTopRated", seriesGetTopRatedController);
 productRouter.get("/series/id/:id", seriesGetByIdController);
 productRouter.get("/series/name/:Name", seriesGetByNameController);
 productRouter.get("/series/getWithNextEpWeek", seriesGetWithNextEpWeekController);
+productRouter.get("/series/getTheatrePass", seriesGetTheatrePassController);
 
 
 
