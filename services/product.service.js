@@ -68,6 +68,18 @@ const seriesGetById = async (id) => {
     return pickedSeries;
 }
 
+const seriesGetByName = async (name) => {
+    const pickedSeriesByName = await models.Product.findOne({
+        where: {
+            Name: name,
+            ContentType: "Series"
+        }
+    })
+    return pickedSeriesByName
+}
+
+
+
 
 
 module.exports = {
@@ -76,5 +88,6 @@ module.exports = {
     movieGetByName,
     moviesGetByGenre,
     seriesGetTopRated,
-    seriesGetById
+    seriesGetById,
+    seriesGetByName
 }

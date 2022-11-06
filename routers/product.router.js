@@ -7,7 +7,8 @@ const {
     movieGetByNameController,
     moviesGetByGenreController,
     seriesGetTopRatedController,
-    seriesGetByIdController
+    seriesGetByIdController,
+    seriesGetByNameController
 
 } = require("../controllers/product.controller.js")
 
@@ -20,10 +21,9 @@ productRouter.get("/movies/getByGenre/:Genre", moviesGetByGenreController);
 // Series endpoints
 productRouter.get("/series/getTopRated", seriesGetTopRatedController);
 productRouter.get("/series/id/:id", seriesGetByIdController);
+productRouter.get("/series/name/:Name", seriesGetByNameController);
 
 
 
-
-// productRouter.method("/path", controller)
 
 module.exports = productRouter
