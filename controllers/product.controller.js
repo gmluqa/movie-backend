@@ -1,8 +1,13 @@
 // Service dependencies 
 
-const ProductModel = require("../models/product.js")
+// const ProductModel = require("../models/product.js")
 
-const { movieGetTopRated, movieGetById, movieGetByName } = require("../services/product.service.js")
+const {
+    movieGetTopRated,
+    movieGetById,
+    movieGetByName,
+    moviesGetByGenre
+} = require("../services/product.service.js")
 
 const movieGetTopRatedController = async (req, res) => {
     const resp = await movieGetTopRated()
@@ -21,6 +26,20 @@ const movieGetByNameController = async (req, res) => {
     res.json(resp)
 }
 
+const moviesGetByGenreController = async (req, res) => {
+    try {
+        const { Genre } = req.params
+        const resp = await moviesGetByGenre(Genre)
+        res.json(resp)
+    }
+    catch (error) {
+        res.json(error.message)
+    }
+}
+
 module.exports = {
-    movieGetTopRatedController, movieGetByIdController, movieGetByNameController
+    movieGetTopRatedController,
+    movieGetByIdController,
+    movieGetByNameController,
+    moviesGetByGenreController
 }

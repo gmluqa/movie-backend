@@ -2,13 +2,18 @@ const express = require("express");
 const productRouter = express.Router()
 
 const {
-    movieGetTopRatedController, movieGetByIdController, movieGetByNameController
+    movieGetTopRatedController,
+    movieGetByIdController,
+    movieGetByNameController,
+    moviesGetByGenreController
 
 } = require("../controllers/product.controller.js")
 
 productRouter.get("/movies/getTopRated", movieGetTopRatedController)
 productRouter.get("/movies/id/:id", movieGetByIdController);
 productRouter.get("/movies/name/:Name", movieGetByNameController);
+productRouter.get("/movies/getByGenre/:Genre", moviesGetByGenreController);
+
 
 // productRouter.method("/path", controller)
 

@@ -34,6 +34,20 @@ const movieGetByName = async (name) => {
     return pickedMovieByName
 }
 
+const moviesGetByGenre = async (genre) => {
+    const moviesByGenre = await models.Product.findAll({
+        attributes: ['Name'],
+        where: {
+            Genre: genre,
+            ContentType: "Movie"
+        }
+    })
+    return moviesByGenre
+}
+
 module.exports = {
-    movieGetTopRated, movieGetById, movieGetByName
+    movieGetTopRated,
+    movieGetById,
+    movieGetByName,
+    moviesGetByGenre
 }
