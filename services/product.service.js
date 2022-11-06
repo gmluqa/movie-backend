@@ -5,7 +5,7 @@ const movieGetTopRated = async () => {
     const topRatedMovies = await models.Product.findAll({
         where: {
             rating: {
-                [Op.gt]: 5
+                [Op.gt]: 6
             }
         }
 
