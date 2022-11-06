@@ -2,7 +2,7 @@
 
 const ProductModel = require("../models/product.js")
 
-const { movieGetTopRated, movieGetById } = require("../services/product.service.js")
+const { movieGetTopRated, movieGetById, movieGetByName } = require("../services/product.service.js")
 
 const movieGetTopRatedController = async (req, res) => {
     const resp = await movieGetTopRated()
@@ -15,6 +15,12 @@ const movieGetByIdController = async (req, res) => {
     res.json(resp)
 }
 
+const movieGetByNameController = async (req, res) => {
+    const { Name } = req.params
+    const resp = await movieGetByName(Name)
+    res.json(resp)
+}
+
 module.exports = {
-    movieGetTopRatedController, movieGetByIdController
+    movieGetTopRatedController, movieGetByIdController, movieGetByNameController
 }

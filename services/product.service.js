@@ -15,7 +15,7 @@ const movieGetTopRated = async () => {
 }
 
 const movieGetById = async (id) => {
-    const pickedMovie = await models.Product.findAll({
+    const pickedMovie = await models.Product.findOne({
         where: {
             id: id,
             ContentType: "Movie"
@@ -24,6 +24,16 @@ const movieGetById = async (id) => {
     return pickedMovie;
 }
 
+const movieGetByName = async (name) => {
+    const pickedMovieByName = await models.Product.findOne({
+        where: {
+            Name: name,
+            ContentType: "Movie"
+        }
+    })
+    return pickedMovieByName
+}
+
 module.exports = {
-    movieGetTopRated, movieGetById
+    movieGetTopRated, movieGetById, movieGetByName
 }
