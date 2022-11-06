@@ -1,11 +1,11 @@
 const express = require("express");
 const userRouter = express.Router()
 
-// const {
+const {
+    registerController
+} = require("../controllers/user.controllers.js")
 
-// } = require("../controllers/")
-
-// userRouter.method("/path", controller)'
+userRouter.post("/register", registerController)
 // userRouter.method("/path", controller)
 
 module.exports = userRouter

@@ -11,6 +11,6 @@ const userRouter = require("./routers/user.router.js");
 app.use(express.json())
 app.use("/product", productRouter);
 // app.use("/order", orderRouter);
-// app.use("/user", userRouter);
+app.use("/user", userRouter);
 
 module.exports = app

@@ -1,12 +1,13 @@
 // Service dependencies 
 const {
-    testerServiceUser
+    registerUser
 } = require("../services/user.service.js")
 
-const testUserController = (req, res) => {
-    testerServiceUser()
+const registerController = (req, res) => {
+    let content = req.body
+    registerUser(content)
 }
 
 module.exports = {
-    testUserController
+    registerController
 }

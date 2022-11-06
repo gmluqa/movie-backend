@@ -26,6 +26,7 @@ productRouter.get("/series/name/:Name", seriesGetByNameController);
 productRouter.get("/series/getWithNextEpWeek", seriesGetWithNextEpWeekController);
 productRouter.get("/series/getTheatrePass", seriesGetTheatrePassController);
 
+// User endpoints
 
 
 
