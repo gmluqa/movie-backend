@@ -1,4 +1,4 @@
-const { Op } = require("sequelize");
+const { Op, DATE } = require("sequelize");
 const models = require('../models/index')
 
 const movieGetTopRated = async () => {
@@ -78,7 +78,18 @@ const seriesGetByName = async (name) => {
     return pickedSeriesByName
 }
 
-
+const seriesGetWithNextEpWeek = async () => {
+    const seriesNextEpsSoon = await models.Product.findAll({
+        where: {
+            ContentType: "Series"
+        }
+    })
+    for (i = 0; i < seriesNextEpsSoon.length; i++) {
+        let loggedDateNextEp = seriesNextEpsSoon[i].NextEpDate
+        console.log(strtotime(loggedDateNextEp))
+        // TO:DO Make the next ep service work
+    }
+}
 
 
 
@@ -89,5 +100,6 @@ module.exports = {
     moviesGetByGenre,
     seriesGetTopRated,
     seriesGetById,
-    seriesGetByName
+    seriesGetByName,
+    seriesGetWithNextEpWeek
 }

@@ -8,7 +8,8 @@ const {
     moviesGetByGenreController,
     seriesGetTopRatedController,
     seriesGetByIdController,
-    seriesGetByNameController
+    seriesGetByNameController,
+    seriesGetWithNextEpWeekController
 
 } = require("../controllers/product.controller.js")
 
@@ -22,6 +23,8 @@ productRouter.get("/movies/getByGenre/:Genre", moviesGetByGenreController);
 productRouter.get("/series/getTopRated", seriesGetTopRatedController);
 productRouter.get("/series/id/:id", seriesGetByIdController);
 productRouter.get("/series/name/:Name", seriesGetByNameController);
+productRouter.get("/series/getWithNextEpWeek", seriesGetWithNextEpWeekController);
+
 
 
 
