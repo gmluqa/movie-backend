@@ -6,7 +6,8 @@ const movieGetTopRated = async () => {
         where: {
             rating: {
                 [Op.gt]: 6
-            }
+            },
+            ContentType: "Movie"
         }
 
     })
