@@ -7,7 +7,8 @@ const {
     movieGetById,
     movieGetByName,
     moviesGetByGenre,
-    seriesGetTopRated
+    seriesGetTopRated,
+    seriesGetById
 } = require("../services/product.service.js")
 
 const movieGetTopRatedController = async (req, res) => {
@@ -43,6 +44,12 @@ const seriesGetTopRatedController = async (req, res) => {
     res.json(resp)
 }
 
+const seriesGetByIdController = async (req, res) => {
+    const { id } = req.params
+    const resp = await seriesGetById(id)
+    res.json(resp)
+}
+
 
 
 module.exports = {
@@ -50,5 +57,6 @@ module.exports = {
     movieGetByIdController,
     movieGetByNameController,
     moviesGetByGenreController,
-    seriesGetTopRatedController
+    seriesGetTopRatedController,
+    seriesGetByIdController
 }

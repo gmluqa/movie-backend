@@ -58,10 +58,23 @@ const seriesGetTopRated = async () => {
     return topRatedSeries
 }
 
+const seriesGetById = async (id) => {
+    const pickedSeries = await models.Product.findOne({
+        where: {
+            id: id,
+            ContentType: "Series"
+        }
+    })
+    return pickedSeries;
+}
+
+
+
 module.exports = {
     movieGetTopRated,
     movieGetById,
     movieGetByName,
     moviesGetByGenre,
-    seriesGetTopRated
+    seriesGetTopRated,
+    seriesGetById
 }
