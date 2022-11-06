@@ -13,7 +13,8 @@ module.exports = {
         type: Sequelize.ENUM("Movie", "Series")
       },
       Name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       Rating: {
         type: Sequelize.FLOAT
