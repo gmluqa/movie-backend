@@ -14,7 +14,6 @@ module.exports = {
         references: {
           model: {
             tableName: 'Users',
-
           },
           key: 'id'
         },
@@ -25,7 +24,6 @@ module.exports = {
         references: {
           model: {
             tableName: 'Products',
-
           },
           key: 'id'
         },
