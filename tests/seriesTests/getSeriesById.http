@@ -1,0 +1,2 @@
+GET http://localhost:3000/product/series/id/2
+
