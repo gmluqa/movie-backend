@@ -6,6 +6,7 @@ const {
 const registerController = (req, res) => {
     let content = req.body
     registerUser(content)
+    res.send("User registered!")
 }
 
 module.exports = {

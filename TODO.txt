@@ -1,0 +1,16 @@
+ENDPOINTS:
+Series:
+-GET SERIES THAT WILL HAVE A EP IN NEXT 7 DAYS (SET PROPETY TO TRUE)
+
+-Authentication system with JWT
+
+User:
+-GET A USERS DETAILS
+-MODIFY A USERS DETAILS
+-DELETE A USER (only admin can)
+
+Orders:
+-Generate a new ORDER
+-Modify an ORDER
+-List all ORDERS of a USER (by ID)
+-List all orders (Only admin can)
