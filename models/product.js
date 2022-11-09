@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     Name: DataTypes.STRING,
     Rating: DataTypes.FLOAT,
     Genre: DataTypes.STRING,
-    NextEpDate: DataTypes.DATE,
+    EpInWeek: DataTypes.BOOLEAN,
     TheatrePass: DataTypes.BOOLEAN
   }, {
     sequelize,

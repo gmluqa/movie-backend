@@ -81,15 +81,12 @@ const seriesGetByName = async (name) => {
 const seriesGetWithNextEpWeek = async () => {
     const seriesNextEpsSoon = await models.Product.findAll({
         where: {
-            ContentType: "Series"
+            EpInWeek: true
         }
     })
-    for (i = 0; i < seriesNextEpsSoon.length; i++) {
-        let loggedDateNextEp = seriesNextEpsSoon[i].NextEpDate
-        console.log(loggedDateNextEp)
-        // TO:DO Make the next ep service work
-    }
+    return seriesNextEpsSoon
 }
+
 
 const seriesGetTheatrePass = async () => {
     const seriesTheatrePass = await models.Product.findAll({

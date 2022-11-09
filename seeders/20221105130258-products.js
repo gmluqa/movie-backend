@@ -16,7 +16,7 @@ module.exports = {
       ContentType: "Series",
       rating: 2,
       Genre: "Drugs",
-      NextEpDate: '2022-11-8 06:40:10',
+      EpInWeek: true,
       TheatrePass: true,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -34,7 +34,7 @@ module.exports = {
       ContentType: "Series",
       rating: 4,
       Genre: "Soap Opera",
-      NextEpDate: '2022-11-10 06:40:10',
+      EpInWeek: false,
       TheatrePass: false,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -52,7 +52,7 @@ module.exports = {
       ContentType: "Series",
       rating: 6,
       Genre: "Technological",
-      NextEpDate: '2022-11-12 06:40:10',
+      EpInWeek: true,
       TheatrePass: true,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -70,7 +70,7 @@ module.exports = {
       ContentType: "Series",
       rating: 8,
       Genre: "Comedy",
-      NextEpDate: '2022-11-14 06:40:10',
+      EpInWeek: false,
       TheatrePass: false,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -88,7 +88,7 @@ module.exports = {
       ContentType: "Series",
       rating: 10,
       Genre: "Comedy",
-      NextEpDate: '2022-11-16 06:40:10',
+      EpInWeek: true,
       TheatrePass: true,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'

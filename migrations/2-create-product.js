@@ -22,8 +22,8 @@ module.exports = {
       Genre: {
         type: Sequelize.STRING
       },
-      NextEpDate: {
-        type: Sequelize.DATE
+      EpInWeek: {
+        type: Sequelize.BOOLEAN
       },
       TheatrePass: {
         type: Sequelize.BOOLEAN

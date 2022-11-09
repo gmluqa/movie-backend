@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db:up": "sudo docker start mysql",
+    "db:up": "docker start mysql",
     "listen": "node --watch index.js"
   },
   "repository": {

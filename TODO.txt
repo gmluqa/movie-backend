@@ -1,6 +1,4 @@
 ENDPOINTS:
-Series:
--GET SERIES THAT WILL HAVE A EP IN NEXT 7 DAYS (SET PROPETY TO TRUE)
 
 -Authentication system with JWT
 
