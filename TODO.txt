@@ -3,7 +3,6 @@ ENDPOINTS:
 -Authentication system with JWT
 
 User:
--GET A USERS DETAILS
 -MODIFY A USERS DETAILS
 -DELETE A USER (only admin can)
 

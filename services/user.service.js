@@ -17,8 +17,18 @@ const registerUser = async (userCredentials) => {
     await newUser.save();
 }
 
+const getDetails = async (id) => {
+    const pickedUser = await models.User.findOne({
+        where: {
+            id: id
+        }
+    })
+    return pickedUser
+}
+
 module.exports = {
     testerServiceUser,
-    registerUser
+    registerUser,
+    getDetails
 }
 

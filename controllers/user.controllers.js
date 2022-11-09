@@ -1,6 +1,7 @@
 // Service dependencies 
 const {
-    registerUser
+    registerUser,
+    getDetails
 } = require("../services/user.service.js")
 
 const registerController = (req, res) => {
@@ -9,8 +10,10 @@ const registerController = (req, res) => {
     res.send("User registered!")
 }
 
-const getDetailsController = (req, res) => {
-
+const getDetailsController = async (req, res) => {
+    let { id } = req.params
+    const resp = await getDetails(id)
+    res.json(resp)
 }
 
 const modifyUserDetailsController = (req, res) => {
