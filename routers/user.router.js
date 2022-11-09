@@ -3,11 +3,15 @@ const userRouter = express.Router()
 
 const {
     registerController,
-    getDetailsController
+    getDetailsController,
+    modifyUserDetailsController,
+    deleteUserController
 } = require("../controllers/user.controllers.js")
 
 userRouter.post("/register", registerController)
-// userRouter.get("/getDetails", getDetailsController)
+userRouter.get("/getUserDetails/:id", getDetailsController)
+userRouter.patch("/modifyUserDetails/:id", modifyUserDetailsController)
+userRouter.delete("/deleteUser/:id", deleteUserController)
 // userRouter.method("/path", controller)
 
 module.exports = userRouter

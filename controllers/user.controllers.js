@@ -9,6 +9,21 @@ const registerController = (req, res) => {
     res.send("User registered!")
 }
 
+const getDetailsController = (req, res) => {
+
+}
+
+const modifyUserDetailsController = (req, res) => {
+
+}
+
+const deleteUserController = (req, res) => {
+
+}
+
 module.exports = {
-    registerController
+    registerController,
+    getDetailsController,
+    modifyUserDetailsController,
+    deleteUserController
 }

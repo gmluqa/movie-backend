@@ -1,13 +1,25 @@
 // Service dependencies 
 const {
-    testerServiceOrder
+
 } = require("../services/order.service.js")
 
-const testOrderController = (req, res) => {
-    let resp = testerServiceOrder()
-    res.send(resp)
+const createNewOrderController = () => {
+
+}
+
+const getOrdersFromUserController = () => {
+
+}
+const modifyOrderController = () => {
+
+}
+const getAllOrdersController = () => {
+
 }
 
 module.exports = {
-    testOrderController
+    createNewOrderController,
+    getOrdersFromUserController,
+    modifyOrderController,
+    getAllOrdersController
 }
