@@ -1,1 +1,3 @@
 DELETE http://localhost:3000/user/delete/id/1
+
+// Only admin can

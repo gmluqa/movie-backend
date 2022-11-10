@@ -1,1 +1,4 @@
 GET http://localhost:3000/product/series/name/Breaking%20Bad
+
+
+// Anyone can fulfill this request
