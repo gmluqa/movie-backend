@@ -5,17 +5,12 @@ const {
 } = require("../services/user.service.js")
 
 const registerController = (req, res) => {
-    try {
-        let content = req.body
-        registerUser(content)
-        res.status(201).send({
-            message: "User registered succesfully!"
-        })
-    } catch (e) {
-        res.status(409).send({
-            message: "Email already in use!"
-        })
-    }
+    let content = req.body
+    registerUser(content)
+    res.status(201).send({
+        message: "User registered succesfully!"
+    })
+
 
 }
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db:up": "docker start mysql",
+    "docker:up": "docker start mysql",
     "listen": "node --watch index.js",
     "sqlMake": "sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
     "sqlUnmake": "sequelize-cli db:drop"
@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/gmluqa/movie-backend#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.3"

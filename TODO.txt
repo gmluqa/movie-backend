@@ -13,3 +13,6 @@ Orders:
 -List all orders (Only admin can)
 
 
+Make endpoints without error handeling
+or data input ironing,
+do all that later.
