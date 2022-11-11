@@ -16,3 +16,5 @@ Orders:
 Make endpoints without error handeling
 or data input ironing,
 do all that later.
+
+- TRY CATCH ALL CONTROLLERS!!!

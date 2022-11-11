@@ -16,8 +16,7 @@ const registerUser = async (userCredentials) => {
 }
 
 const hashedPasswordGen = async (password) => {
-    const salt = await bcrypt.genSalt()
-    const hashedPassword = await bcrypt.hash(password, salt)
+    const hashedPassword = await bcrypt.hash(password, 10)
     return hashedPassword
 }
 
