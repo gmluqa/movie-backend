@@ -2,11 +2,23 @@ POST http://localhost:3000/user/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "FirstName": "Jeremy",
+    "FirstName": "asdasd",
     "LastName" : "Wilkinsss",
-    "Email"    : "thomas@hotmail.co.uk",
-    "Password" : "passwordlololol",
-    "UserType" : "User"
+    "Email"    : "",
+    "Password" : "passwordlololol"
 }
 
-// Anyone can register
+// Anyone can register, but the UserType can ONLY be "USER"
+
+POST http://localhost:3000/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "FirstName": "hackerman1234",
+    "LastName" : "jackermater",
+    "Email"    : "hackerman@gmail.com",
+    "Password" : "lolPWNED",
+    "UserType" : "Admin"
+}
+
+// Here is an example of someone trying to inject "Admin" as usertype, it does not work!

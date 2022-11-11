@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "db:up": "docker start mysql",
-    "listen": "node --watch index.js"
+    "listen": "node --watch index.js",
+    "sqlMake": "sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "sqlUnmake": "sequelize-cli db:drop"
   },
   "repository": {
     "type": "git",
