@@ -1,7 +1,9 @@
 // Service dependencies 
 const {
     registerUser,
-    getDetails
+    getDetails,
+    logInUser,
+    bcryptCompare
 } = require("../services/user.service.js")
 
 const registerController = (req, res) => {
@@ -28,9 +30,18 @@ const deleteUserController = (req, res) => {
 
 }
 
+const logInUserController = async (req, res) => {
+    const body = req.body
+
+    const respLogInUser = await logInUser(body)
+    console.log(respLogInUser.Password)
+    // const respBcryptCompare = await bcryptCompare(respLogInUser.Password, body.Password)
+}
+
 module.exports = {
     registerController,
     getDetailsController,
     modifyUserDetailsController,
-    deleteUserController
+    deleteUserController,
+    logInUserController
 }

@@ -9,13 +9,13 @@ const registerUser = async (userCredentials) => {
         FirstName: userCredentials.FirstName,
         LastName: userCredentials.LastName,
         Email: userCredentials.Email,
-        Password: await hashedPasswordGen(userCredentials.Password),
+        Password: await hashPassword(userCredentials.Password),
         UserType: 'User'
     })
     await newUser.save();
 }
 
-const hashedPasswordGen = async (password) => {
+const hashPassword = async (password) => {
     const hashedPassword = await bcrypt.hash(password, 10)
     return hashedPassword
 }
@@ -34,9 +34,6 @@ const hashedPasswordGen = async (password) => {
 // }
 
 
-
-
-
 const getDetails = async (id) => {
     const pickedUser = await models.User.findOne({
         where: {
@@ -46,8 +43,33 @@ const getDetails = async (id) => {
     return pickedUser
 }
 
+const logInUser = async (body) => {
+    // fetch 
+    const findUser = await models.User.findOne({
+        where: {
+            Email: body.Email
+        },
+        attributes: ['Email', 'Password'],
+    })
+    return findUser
+}
+
+const bcryptCompare = async (hashedPassword, password,) => {
+    const passCheck = bcrypt.compare(hashedPassword(), password)
+    console.log(hashPassword)
+    console.log(password)
+    if (passCheck) {
+        return console.log("true")
+    }
+    else {
+        return console.log("check failed")
+    }
+}
+
 module.exports = {
     registerUser,
-    getDetails
+    getDetails,
+    logInUser,
+    bcryptCompare
 }
 

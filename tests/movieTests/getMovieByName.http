@@ -1,3 +1,7 @@
 GET http://localhost:3000/product/movies/name/The%20Lion%20King
 
-// Anyone can fulfill this request
+// Anyone can fulfill this request, will be successful
+
+GET http://localhost:3000/product/movies/name/I%20Love%20Potatoes:%20The%20Movie
+
+// Anyone can fulfill this request, this is meant to fail

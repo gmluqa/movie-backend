@@ -1,3 +1,7 @@
 GET http://localhost:3000/product/series/id/2
 
-// Anyone can fulfill this request
+// Anyone can fulfill this request, will be successful
+
+GET http://localhost:3000/product/series/id/999999
+
+// Anyone can fulfill this request, this is meant to fail

@@ -1,3 +1,7 @@
+
+
+Auth
+
 ENDPOINTS:
 
 -Authentication system with JWT

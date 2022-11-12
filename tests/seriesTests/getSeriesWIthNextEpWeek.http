@@ -1,3 +1,7 @@
 GET http://localhost:3000/product/series/getWithNextEpWeek
 
-// Anyone can fulfill this request
+// Anyone can fulfill this request, will be successful
+
+GET http://localhost:3000/product/series/getWithNextEpWeek
+
+// Anyone can fulfill this request, if the query netted 0 results it would theoretially fail
