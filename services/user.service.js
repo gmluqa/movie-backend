@@ -60,10 +60,35 @@ const bcryptCompare = async (password, hashedPassword) => {
     return passCompare
 }
 
+const modifyUserDetails = async (body) => {
+
+    await models.User.update({
+        FirstName: body.FirstName,
+        LastName: body.LastName,
+        Email: body.Email,
+    }, {
+        where: {
+            id: body.id
+        }
+    })
+    if (body.Password) {
+        await models.User.update({
+            Password: await hashPassword(body.Password)
+        }, {
+            where: {
+                id: body.id
+            }
+        })
+    }
+
+
+}
+
 module.exports = {
     registerUser,
     getDetails,
     logInUser,
-    bcryptCompare
+    bcryptCompare,
+    modifyUserDetails
 }
 

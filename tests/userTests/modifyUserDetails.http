@@ -1,3 +1,11 @@
-PUT http://localhost:3000/user/details/id/1
+PATCH http://localhost:3000/user/modifyUserDetails/11
+Content-Type: application/json
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIkVtYWlsIjoidGVzdHN1YmplY3RAZ21haWwuY29tIiwiVXNlclR5cGUiOiJVc2VyIiwiaWF0IjoxNjY4MjY1MTUyfQ.JFbI4xf0fqIPP8EEfrNakHj2aQcg_gb7D6ipg00XDFM
 
+
+{
+    "id": 11,
+    "FirstName" : "Thomas",
+    "Password" : "Gobbeldiegoop1234"
+}
 // Only logged in users can

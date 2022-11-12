@@ -15,7 +15,7 @@ const {
 
 userRouter.post("/register", registerController)
 userRouter.get("/getUserDetails/:id", verifyTokenMiddleware, getDetailsController)
-userRouter.patch("/modifyUserDetails/:id", modifyUserDetailsController)
+userRouter.patch("/modifyUserDetails/:id", verifyTokenMiddleware, modifyUserDetailsController)
 userRouter.delete("/deleteUser/:id", deleteUserController)
 userRouter.post("/login", logInUserController)
 // userRouter.method("/path", controller)
