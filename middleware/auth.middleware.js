@@ -6,8 +6,12 @@ const verifyTokenMiddleware = (req, res, next) => {
 
     try {
         const verified = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET)
-        req.user = verified
-        next()
+        if (verified.id != req.params.id) {
+            res.status(401).send("Access denied")
+        } else {
+            req.user = verified
+            next()
+        }
     } catch (error) {
         res.status(400).send('Invalid token!')
     }
