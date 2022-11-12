@@ -13,8 +13,8 @@ const {
 } = require("../middleware/auth.middleware")
 
 orderRouter.post("/newOrder", verifyUserTokenMiddleware, createNewOrderController)
+orderRouter.patch("/modify/:id", verifyUserTokenMiddleware, modifyOrderController)
 orderRouter.get("/user/:id", getOrdersFromUserController)
-orderRouter.patch("/modify/:id", modifyOrderController)
 orderRouter.get("/listAll", getAllOrdersController)
 
 module.exports = orderRouter
