@@ -54,16 +54,10 @@ const logInUser = async (body) => {
     return findUser
 }
 
-const bcryptCompare = async (hashedPassword, password,) => {
-    const passCheck = bcrypt.compare(hashedPassword(), password)
-    console.log(hashPassword)
-    console.log(password)
-    if (passCheck) {
-        return console.log("true")
-    }
-    else {
-        return console.log("check failed")
-    }
+const bcryptCompare = async (password, hashedPassword) => {
+    console.log(password, hashedPassword)
+    const passCompare = await bcrypt.compare(password, hashedPassword)
+    return passCompare
 }
 
 module.exports = {

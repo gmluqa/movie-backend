@@ -12,8 +12,6 @@ const registerController = (req, res) => {
     res.status(201).send({
         message: "User registered succesfully!"
     })
-
-
 }
 
 const getDetailsController = async (req, res) => {
@@ -32,10 +30,10 @@ const deleteUserController = (req, res) => {
 
 const logInUserController = async (req, res) => {
     const body = req.body
-
     const respLogInUser = await logInUser(body)
-    console.log(respLogInUser.Password)
-    // const respBcryptCompare = await bcryptCompare(respLogInUser.Password, body.Password)
+    console.log(respLogInUser.Password, body.Password)
+    const respBcryptCompare = await bcryptCompare(body.Password, respLogInUser.Password)
+    res.send(respBcryptCompare)
 }
 
 module.exports = {
