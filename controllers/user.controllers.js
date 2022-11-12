@@ -41,18 +41,14 @@ const logInUserController = async (req, res) => {
     else {
         const secret = process.env.ACCESS_TOKEN_SECRET || ""
 
-        const jwt = jswonwebtoken.sign({
+        const token = jswonwebtoken.sign({
             id: respLogInUser.id,
             Email: respLogInUser.Email,
-            UserType: respLogInUser.UserType,
-            Created: Date.now()
+            UserType: respLogInUser.UserType
         }, secret)
 
 
-        res.status(200).json({
-            message: "Login succesful",
-            jwt: jwt
-        })
+        res.header('auth-token', token).send(token)
     }
 }
 

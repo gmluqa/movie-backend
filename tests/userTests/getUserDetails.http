@@ -1,3 +1,3 @@
-http://localhost:3000/user/getUserDetails/2
-
+GET http://localhost:3000/user/getUserDetails/11
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIkVtYWlsIjoidGVzdHN1YmplY3RAZ21haWwuY29tIiwiVXNlclR5cGUiOiJVc2VyIiwiaWF0IjoxNjY4MjY1MTUyfQ.JFbI4xf0fqIPP8EEfrNakHj2aQcg_gb7D6ipg00XDFM
 // Only logged in users can
