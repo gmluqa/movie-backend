@@ -9,12 +9,13 @@ const {
 } = require("../controllers/order.controllers.js")
 
 const {
-    verifyUserTokenMiddleware
+    verifyUserTokenMiddleware,
+    verifyTokenMiddleware
 } = require("../middleware/auth.middleware")
 
 orderRouter.post("/newOrder", verifyUserTokenMiddleware, createNewOrderController)
 orderRouter.patch("/modify/:id", verifyUserTokenMiddleware, modifyOrderController)
-orderRouter.get("/user/:id", getOrdersFromUserController)
+orderRouter.get("/user/:id", verifyTokenMiddleware, getOrdersFromUserController)
 orderRouter.get("/listAll", getAllOrdersController)
 
 module.exports = orderRouter

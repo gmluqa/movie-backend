@@ -1,7 +1,8 @@
 // Service dependencies 
 const {
     createNewOrderSerice,
-    modifyOrder
+    modifyOrder,
+    getAllOrders
 } = require("../services/order.service.js")
 
 
@@ -18,7 +19,12 @@ const createNewOrderController = async (req, res) => {
     })
 }
 
-const getOrdersFromUserController = () => {
+const getOrdersFromUserController = async (req, res) => {
+    const token = req.header("auth-token")
+    const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET)
+    const userId = decoded.id
+    const resp = await getAllOrders(userId)
+    res.json(resp)
 
 }
 const modifyOrderController = async (req, res) => {
@@ -27,7 +33,7 @@ const modifyOrderController = async (req, res) => {
     await modifyOrder(body, token)
     res.status(201).send({ message: "Order changed succesfully!" })
 }
-const getAllOrdersController = () => {
+const getAllOrdersController = async (req, res) => {
 
 }
 
