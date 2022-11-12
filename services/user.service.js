@@ -49,7 +49,7 @@ const logInUser = async (body) => {
         where: {
             Email: body.Email
         },
-        attributes: ['Email', 'Password'],
+        attributes: ['id', 'Email', 'Password', 'UserType'],
     })
     return findUser
 }
