@@ -80,8 +80,15 @@ const modifyUserDetails = async (body) => {
             }
         })
     }
+}
 
-
+const deleteUser = async (id) => {
+    await models.User.destroy({
+        where: {
+            id: id
+        }
+    });
+    return
 }
 
 module.exports = {
@@ -90,6 +97,7 @@ module.exports = {
     logInUser,
     bcryptCompare,
     modifyUserDetails,
-    hashPassword
+    hashPassword,
+    deleteUser
 }
 

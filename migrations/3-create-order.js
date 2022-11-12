@@ -17,6 +17,8 @@ module.exports = {
           },
           key: 'id'
         },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         allowNull: false
       },
       Product_ID: {
@@ -27,6 +29,8 @@ module.exports = {
           },
           key: 'id'
         },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         allowNull: false
       },
       createdAt: {

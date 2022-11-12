@@ -9,7 +9,7 @@ const verifyTokenMiddleware = (req, res, next) => {
         if (verified.id != req.params.id) {
             res.status(401).send("Access denied")
         } else {
-            req.user = verified
+            // req.user = verified
             next()
         }
     } catch (error) {
@@ -23,11 +23,10 @@ const verifyAdminMiddleware = (req, res, next) => {
 
     try {
         const verified = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET)
-        if (verified.Usertype !== "Admin") {
-            res.status(401).send("Access denied")
-        } if (verified.Usertype === "Admin") {
-            req.user = verified
+        if (verified.UserType === "Admin") {
             next()
+        } else {
+            res.status(401).json({ message: "Access denied!!!" })
         }
     } catch (error) {
         res.status(400).send('Invalid token!')

@@ -4,7 +4,8 @@ const {
     getDetails,
     logInUser,
     bcryptCompare,
-    modifyUserDetails
+    modifyUserDetails,
+    deleteUser
 } = require("../services/user.service.js")
 
 const jswonwebtoken = require("jsonwebtoken")
@@ -29,8 +30,10 @@ const modifyUserDetailsController = async (req, res) => {
     res.status(201).send({ message: "Details changed succesfully!" })
 }
 
-const deleteUserController = (req, res) => {
-
+const deleteUserController = async (req, res) => {
+    let { id } = req.params
+    await deleteUser(id)
+    res.status(200).json({ message: "User succesfully deleted" })
 }
 
 const logInUserController = async (req, res) => {
