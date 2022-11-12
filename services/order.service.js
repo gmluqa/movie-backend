@@ -20,14 +20,11 @@ const modifyOrder = async (body, token) => {
     })
 }
 
-const getAllOrders = async (id) => {
-    const pickedUsersOrders = await models.Order.findAll({
-        where: {
-            User_ID: id
-        },
-        attributes: ['Product_ID']
+const getAllOrders = async () => {
+    const allOrders = await models.Order.findAll({
+        attributes: ['id', 'Product_ID', 'User_ID']
     })
-    return pickedUsersOrders
+    return allOrders
 }
 
 module.exports = {

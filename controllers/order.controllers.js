@@ -34,7 +34,9 @@ const modifyOrderController = async (req, res) => {
     res.status(201).send({ message: "Order changed succesfully!" })
 }
 const getAllOrdersController = async (req, res) => {
-
+    console.log('im in the res')
+    const resp = await getAllOrders()
+    res.json(resp)
 }
 
 module.exports = {
