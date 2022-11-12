@@ -1,4 +1,5 @@
 'use strict';
+const { hashPassword } = require('../services/user.service')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
       FirstName: 'Victor',
       LastName: 'Prezzie',
       Email: 'victor@gmail.com',
-      Password: 'password1234',
+      Password: await hashPassword('password1234'),
       UserType: 'Admin',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -16,7 +17,7 @@ module.exports = {
       FirstName: 'Mary',
       LastName: 'Wilkins',
       Email: 'mary@gmail.com',
-      Password: 'asdasd23',
+      Password: await hashPassword('asdasd23'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -25,7 +26,7 @@ module.exports = {
       FirstName: 'Justin',
       LastName: 'Errot',
       Email: 'justin@gmail.com',
-      Password: 'vcz32f',
+      Password: await hashPassword('asdasd23'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -34,7 +35,7 @@ module.exports = {
       FirstName: 'Gary',
       LastName: 'Thomas',
       Email: 'gary@gmail.com',
-      Password: 'vzcxv34',
+      Password: await hashPassword('vzcxv34'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -43,7 +44,7 @@ module.exports = {
       FirstName: 'Jerry',
       LastName: 'Godot',
       Email: 'jerry@gmail.com',
-      Password: 'vczvx323',
+      Password: await hashPassword('vczvx323'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -52,7 +53,7 @@ module.exports = {
       FirstName: 'Phoenix',
       LastName: 'Wright',
       Email: 'phoenix124@gmail.com',
-      Password: 'vczvarv432',
+      Password: await hashPassword('vczvarv432'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -61,7 +62,7 @@ module.exports = {
       FirstName: 'Mia',
       LastName: 'Fey',
       Email: 'miafey@gmail.com',
-      Password: 'zxcv23241vcx',
+      Password: await hashPassword('zxcv23241v'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -69,7 +70,7 @@ module.exports = {
       FirstName: 'German',
       LastName: 'Gully',
       Email: 'german@gmail.com',
-      Password: 'cvxcv21',
+      Password: await hashPassword('vzcxv34'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -77,7 +78,7 @@ module.exports = {
       FirstName: 'Johnothan',
       LastName: 'Wilkins',
       Email: 'johnothan@gmail.com',
-      Password: 'zxcv31hth3',
+      Password: await hashPassword('asda234234'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -85,7 +86,7 @@ module.exports = {
       FirstName: 'Dalai',
       LastName: 'Llama',
       Email: 'dalai@gmail.com',
-      Password: 'mmm123t1s',
+      Password: await hashPassword('zxc8j9c83'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'

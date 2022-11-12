@@ -89,6 +89,7 @@ module.exports = {
     getDetails,
     logInUser,
     bcryptCompare,
-    modifyUserDetails
+    modifyUserDetails,
+    hashPassword
 }
 

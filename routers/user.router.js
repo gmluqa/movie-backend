@@ -10,13 +10,14 @@ const {
 } = require("../controllers/user.controllers.js")
 
 const {
-    verifyTokenMiddleware
+    verifyTokenMiddleware,
+    verifyAdminMiddleware
 } = require('../middleware/auth.middleware')
 
 userRouter.post("/register", registerController)
 userRouter.get("/getUserDetails/:id", verifyTokenMiddleware, getDetailsController)
 userRouter.patch("/modifyUserDetails/:id", verifyTokenMiddleware, modifyUserDetailsController)
-userRouter.delete("/deleteUser/:id", deleteUserController)
+userRouter.delete("/deleteUser/:id", verifyAdminMiddleware, deleteUserController)
 userRouter.post("/login", logInUserController)
 // userRouter.method("/path", controller)
 
