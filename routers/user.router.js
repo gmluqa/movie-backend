@@ -14,7 +14,9 @@ const {
     verifyAdminMiddleware
 } = require('../middleware/auth.middleware')
 
-userRouter.post("/register", registerController)
+const { checkIfEmailValid } = require("../middleware/user.middleware")
+
+userRouter.post("/register", checkIfEmailValid, registerController)
 userRouter.post("/login", logInUserController)
 userRouter.get("/getUserDetails/:id", verifyTokenMiddleware, getDetailsController)
 userRouter.patch("/modifyUserDetails/:id", verifyTokenMiddleware, modifyUserDetailsController)

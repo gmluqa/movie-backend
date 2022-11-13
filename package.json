@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docker:up": "docker run -p 3306:3306 --name mysqlReto3 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest",
+    "docker:up": "docker run -p 3306:3306 --name mysqlReto3 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest || docker start mysqlReto3",
     "listen": "node --watch index.js",
     "sqlMake": "sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
     "sqlUnmake": "sequelize-cli db:drop"
