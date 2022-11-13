@@ -2,3 +2,6 @@ DELETE http://localhost:3000/user/deleteUser/8
 auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiRW1haWwiOiJ2aWN0b3JAZ21haWwuY29tIiwiVXNlclR5cGUiOiJBZG1pbiIsImlhdCI6MTY2ODI3MDM5Nn0.OdxpewLy0ex18T9aa-O4Cj3ZsQWxLM3hRV4mUxM0lgI
 
 // Only admin can
+
+DELETE http://localhost:3000/user/deleteUser/3
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiRW1haWwiOiJ2aWN0b3JAZ21haWwuY29tIiwiVXNlclR5cGUiOiJBZG1pbiIsImlhdCI6MTY2ODI3MDM5Nn0.OdxpewLy0ex18T9aa-O4Cj3ZsQWxLM3hRV4mUxM0lgI

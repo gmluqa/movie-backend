@@ -1,24 +1,4 @@
-
-
-Auth
-
-ENDPOINTS:
-
--Authentication system with JWT
-
-User:
--MODIFY A USERS DETAILS
--DELETE A USER (only admin can)
-
-Orders:
--Generate a new ORDER
--Modify an ORDER
--List all ORDERS of a USER (by ID)
--List all orders (Only admin can)
-
-
-Make endpoints without error handeling
-or data input ironing,
-do all that later.
+Make erroneous tests -
+Make all endpoints with error handeling
 
 - TRY CATCH ALL CONTROLLERS!!!
