@@ -7,3 +7,32 @@ auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGd
 }
 
 // Logged in users can only fulfill this request, in this case this is user with id=2 in the DB
+
+POST http://localhost:3000/order/newOrder HTTP/1.1
+Content-Type: application/json
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
+
+{
+    "Product_ID": 99999
+}
+
+// Logged in user, trying to insert a product that doesn't exist, fails obviously
+
+POST http://localhost:3000/order/newOrder HTTP/1.1
+Content-Type: application/json
+auth-token: fake.header.auth
+
+{
+    "Product_ID": 1
+}
+
+// User that doesn't exist, trying to insert a valid product
+
+POST http://localhost:3000/order/newOrder HTTP/1.1
+Content-Type: application/json
+
+{
+    "Product_ID": 1
+}
+
+// Person trying to POST with no auth header, trying to insert a valid product

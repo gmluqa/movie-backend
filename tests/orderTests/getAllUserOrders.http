@@ -2,3 +2,8 @@ GET http://localhost:3000/order/user/2
 auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
 
 // Logged in users can only fulfill this request, but only their own, in this case (user id=2) orders
+
+GET http://localhost:3000/order/user/7
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
+
+// Same JWT'd user trying to see another user, it fails

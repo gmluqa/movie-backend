@@ -20,6 +20,16 @@ const modifyOrder = async (body, token) => {
     })
 }
 
+const getAllOrdersFromId = async (id) => {
+    const allOrdersFromId = await models.Order.findAll({
+        where: {
+            User_ID: id
+        },
+        attributes: ['Product_ID']
+    })
+    return allOrdersFromId
+}
+
 const getAllOrders = async () => {
     const allOrders = await models.Order.findAll({
         attributes: ['id', 'Product_ID', 'User_ID']
@@ -27,8 +37,12 @@ const getAllOrders = async () => {
     return allOrders
 }
 
+
+
+
 module.exports = {
     createNewOrderSerice,
     modifyOrder,
-    getAllOrders
+    getAllOrdersFromId,
+    getAllOrders,
 }

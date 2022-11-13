@@ -2,6 +2,6 @@ GET http://localhost:3000/product/movies/id/1
 
 // Anyone can fulfill this request, will be successful
 
-GET http://localhost:3000/product/movies/id/999999
+GET http://localhost:3000/product/movies/id/99999
 
 // Anyone can fulfill this request, this is meant to fail

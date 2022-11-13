@@ -1,3 +1,7 @@
-GET http://localhost:3000/user/getUserDetails/11
-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIkVtYWlsIjoidGVzdHN1YmplY3RAZ21haWwuY29tIiwiVXNlclR5cGUiOiJVc2VyIiwiaWF0IjoxNjY4MjY1MTUyfQ.JFbI4xf0fqIPP8EEfrNakHj2aQcg_gb7D6ipg00XDFM
+GET http://localhost:3000/user/getUserDetails/2
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
 // Only logged in users can
+
+GET http://localhost:3000/user/getUserDetails/3
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
+// Same person trying to get another persons details, fails

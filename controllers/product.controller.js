@@ -16,57 +16,102 @@ const {
 
 // Serves not found message in RARE case of failed to find any top movies
 const movieGetTopRatedController = async (req, res) => {
-    const resp = await movieGetTopRated()
-    resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const resp = await movieGetTopRated()
+        resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 // Serves not found message in case of failed to find movie by ID
 const movieGetByIdController = async (req, res) => {
-    const { id } = req.params
-    const resp = await movieGetById(id)
-    resp ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const { id } = req.params
+        const resp = await movieGetById(id)
+        resp ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 // Serves not found message in case of failed to find movie by Name
 const movieGetByNameController = async (req, res) => {
-    const { Name } = req.params
-    const resp = await movieGetByName(Name)
-    resp ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const { Name } = req.params
+        const resp = await movieGetByName(Name)
+        resp ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 // etc...
 const moviesGetByGenreController = async (req, res) => {
-    const { Genre } = req.params
-    const resp = await moviesGetByGenre(Genre)
-    console.log(resp)
-    resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const { Genre } = req.params
+        const resp = await moviesGetByGenre(Genre)
+        console.log(resp)
+        resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 const seriesGetTopRatedController = async (req, res) => {
-    const resp = await seriesGetTopRated()
-    resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const resp = await seriesGetTopRated()
+        resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 const seriesGetByIdController = async (req, res) => {
-    const { id } = req.params
-    const resp = await seriesGetById(id)
-    resp ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const { id } = req.params
+        const resp = await seriesGetById(id)
+        resp ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 const seriesGetByNameController = async (req, res) => {
-    const { Name } = req.params
-    const resp = await seriesGetByName(Name)
-    resp ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const { Name } = req.params
+        const resp = await seriesGetByName(Name)
+        resp ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 const seriesGetWithNextEpWeekController = async (req, res) => {
-    const resp = await seriesGetWithNextEpWeek()
-    resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const resp = await seriesGetWithNextEpWeek()
+        resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 const seriesGetTheatrePassController = async (req, res) => {
-    const resp = await seriesGetTheatrePass()
-    resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    try {
+        const resp = await seriesGetTheatrePass()
+        resp[0] ? res.status(202).json(resp) : res.status(204).json()
+    }
+    catch (error) {
+        res.status(401).json({ message: "Malformed request" })
+    }
 }
 
 module.exports = {

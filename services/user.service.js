@@ -60,15 +60,14 @@ const bcryptCompare = async (password, hashedPassword) => {
     return passCompare
 }
 
-const modifyUserDetails = async (body) => {
-
+const modifyUserDetails = async (body, id) => {
     await models.User.update({
         FirstName: body.FirstName,
         LastName: body.LastName,
         Email: body.Email,
     }, {
         where: {
-            id: body.id
+            id: id
         }
     })
     if (body.Password) {
@@ -76,7 +75,7 @@ const modifyUserDetails = async (body) => {
             Password: await hashPassword(body.Password)
         }, {
             where: {
-                id: body.id
+                id: id
             }
         })
     }

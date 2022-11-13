@@ -1,11 +1,20 @@
-PATCH http://localhost:3000/user/modifyUserDetails/11
+PATCH http://localhost:3000/user/modifyUserDetails/2
 Content-Type: application/json
-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIkVtYWlsIjoidGVzdHN1YmplY3RAZ21haWwuY29tIiwiVXNlclR5cGUiOiJVc2VyIiwiaWF0IjoxNjY4MjY1MTUyfQ.JFbI4xf0fqIPP8EEfrNakHj2aQcg_gb7D6ipg00XDFM
-
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
 
 {
-    "id": 11,
     "FirstName" : "Thomas",
     "Password" : "Gobbeldiegoop1234"
 }
-// Only logged in users can
+// Only logged in users can change their own
+
+PATCH http://localhost:3000/user/modifyUserDetails/5
+Content-Type: application/json
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiRW1haWwiOiJtYXJ5QGdtYWlsLmNvbSIsIlVzZXJUeXBlIjoiVXNlciIsImlhdCI6MTY2ODI3MzE3Nn0.7AY_3H_18kEGbdNEZ8fZWsSstInPHRu2kfvQwifZCVo
+
+{
+    "FirstName" : "TeLaCole",
+    "Password" : "Gobbeldiegoop1234"
+}
+
+// Bad actor trying to change other users details, this fails
