@@ -18,9 +18,27 @@ I relied heavily on [ExpressJS](https://expressjs.com/) for handling everything 
 
 # Instructions
 
-TO DO: WRITE THIS SECTION ONCE FULLY DEPLOYED
+I have uploaded the DB to a [railway](https://railway.app/) instance, this instance will only linger around for 200 hours since this REPO's creation. (The railway instance will be down 2 weeks after this repo being deployed, so don't expect it to be there anymore if you're reading this.)
 
-I have uploaded the DB to a [railway](https://railway.app/) instance, this instance will only linger around for 200 hours since this REPO's creation. If you are interested in setting up the DB locally, contact me and I will personally document the local set up process, although this will be easy if you are familiar with sequelize. 😇
+Setting up locally:
+
+(Requires docker)
+
+`git clone https://github.com/gmluqa/movie-backend.git`
+
+`cd movie-backend`
+
+`npm i`
+
+Rename .env.example and config/config.json.example to .env and config/config.json respectively. All variables for local development are set! 👾
+
+`npm run docker:up` Spins up a docker instance containing a MySql server
+
+`npm run sqlMake` Deploys the database
+
+`npm run listen` Deploys the API, linked to the database
+
+And that is all for set-up, time to run some endpoints. 👉
 
 # Endpoints avaliable
 
@@ -35,3 +53,5 @@ Every single possible endpoint can be found in the `./tests` folder. 🧪, there
 - [MD5 encryption is NOT secure!](https://youtu.be/GI790E1JMgw?t=881)
 
 I'd like to thank my tutors at [GeeksHubs Academy](https://geekshubs.com/) for their excellent guidance on carrying out this weekly programming challenge.
+
+I will update this repo in the future with more middleware to control user registration inputs and time-based JWT tokens, as well as minimizing information input in URI's, stay tuned!

@@ -20,20 +20,6 @@ const hashPassword = async (password) => {
     return hashedPassword
 }
 
-// do this later
-// const checkEmailInstance = async (email) => {
-//     const mailSearch = await models.User.findOne({
-//         where: {
-//             Email: email
-//         }
-//     })
-//     if (mailSearch == null) {
-//         return console.log("user not registered")
-//     }
-//     return Error("Test")
-// }
-
-
 const getDetails = async (id) => {
     const pickedUser = await models.User.findOne({
         where: {
@@ -44,7 +30,6 @@ const getDetails = async (id) => {
 }
 
 const logInUser = async (body) => {
-    // fetch 
     const findUser = await models.User.findOne({
         where: {
             Email: body.Email

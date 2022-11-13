@@ -1,5 +1,6 @@
 'use strict';
 const { hashPassword } = require('../services/user.service')
+// Passwords are hashed during seeding
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {

@@ -10,10 +10,6 @@ const {
     seriesGetTheatrePass
 } = require("../services/product.service.js")
 
-// Intersting observation, 204 http statuses with express cannot return messages
-// Read more about it here: https://bambielli.com/til/2017-03-26-express-res-204/
-// TODO: Add this section to readme as intersting discovery 
-
 // Serves not found message in RARE case of failed to find any top movies
 const movieGetTopRatedController = async (req, res) => {
     try {

@@ -1,3 +1,0 @@
-Make erroneous test examples -
-Try catch all controllers
-Add timeout to JWT's
