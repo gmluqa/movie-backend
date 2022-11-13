@@ -32,7 +32,7 @@ const getOrdersFromUserController = async (req, res) => {
         res.json(resp)
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -53,7 +53,7 @@ const getAllOrdersController = async (req, res) => {
         res.json(resp)
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 

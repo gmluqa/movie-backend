@@ -18,7 +18,7 @@ const registerController = (req, res) => {
             message: "User registered succesfully!"
         })
     } catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -28,7 +28,7 @@ const getDetailsController = async (req, res) => {
         const resp = await getDetails(id)
         res.json(resp)
     } catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -40,7 +40,7 @@ const modifyUserDetailsController = async (req, res) => {
         await modifyUserDetails(body, id)
         res.status(201).send({ message: "Details changed succesfully!" })
     } catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -50,7 +50,7 @@ const deleteUserController = async (req, res) => {
         await deleteUser(id)
         res.status(200).json({ message: "User succesfully deleted" })
     } catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -61,7 +61,7 @@ const logInUserController = async (req, res) => {
         console.log(respLogInUser.Password, body.Password)
         const respBcryptCompare = await bcryptCompare(body.Password, respLogInUser.Password)
         if (respBcryptCompare === false) {
-            res.status(401).json({ message: "Password or Email incorrect!" })
+            res.status(400).json({ message: "Password or Email incorrect!" })
         }
         else {
             const secret = process.env.ACCESS_TOKEN_SECRET || ""
@@ -77,7 +77,7 @@ const logInUserController = async (req, res) => {
         }
     }
     catch (error) {
-        res.status(401).json({ message: "Password or Email incorrect!" })
+        res.status(400).json({ message: "Password or Email incorrect!" })
     }
 }
 

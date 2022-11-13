@@ -21,7 +21,7 @@ const movieGetTopRatedController = async (req, res) => {
         resp[0] ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -33,7 +33,7 @@ const movieGetByIdController = async (req, res) => {
         resp ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -45,7 +45,7 @@ const movieGetByNameController = async (req, res) => {
         resp ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -58,7 +58,7 @@ const moviesGetByGenreController = async (req, res) => {
         resp[0] ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -68,7 +68,7 @@ const seriesGetTopRatedController = async (req, res) => {
         resp[0] ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -79,7 +79,7 @@ const seriesGetByIdController = async (req, res) => {
         resp ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -90,7 +90,7 @@ const seriesGetByNameController = async (req, res) => {
         resp ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -100,7 +100,7 @@ const seriesGetWithNextEpWeekController = async (req, res) => {
         resp[0] ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
@@ -110,7 +110,7 @@ const seriesGetTheatrePassController = async (req, res) => {
         resp[0] ? res.status(202).json(resp) : res.status(204).json()
     }
     catch (error) {
-        res.status(401).json({ message: "Malformed request" })
+        res.status(400).json({ message: "Malformed request" })
     }
 }
 
