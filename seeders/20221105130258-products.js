@@ -5,6 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Products', [{
       Name: 'The Lion King',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Movie",
       rating: 1,
       Genre: "Animated",
@@ -13,6 +14,7 @@ module.exports = {
     },
     {
       Name: 'Breaking Bad',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Series",
       rating: 2,
       Genre: "Drugs",
@@ -23,6 +25,7 @@ module.exports = {
     },
     {
       Name: 'Matrix',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Movie",
       rating: 3,
       Genre: "Psychological",
@@ -31,6 +34,7 @@ module.exports = {
     },
     {
       Name: 'Ugly Betty',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Series",
       rating: 4,
       Genre: "Soap Opera",
@@ -41,6 +45,7 @@ module.exports = {
     },
     {
       Name: 'Finding Nemo',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Movie",
       rating: 5,
       Genre: "Animated",
@@ -49,6 +54,7 @@ module.exports = {
     },
     {
       Name: 'Cyberpunk: Edgerunners',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Series",
       rating: 6,
       Genre: "Technological",
@@ -59,6 +65,7 @@ module.exports = {
     },
     {
       Name: 'Matrix 2',
+      Poster: 'https://pics.filmaffinity.com/Matrix_Reloaded-153250831-large.jpg',
       ContentType: "Movie",
       rating: 7,
       Genre: "Psychological",
@@ -67,6 +74,7 @@ module.exports = {
     },
     {
       Name: 'Rick and Morty',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Series",
       rating: 8,
       Genre: "Comedy",
@@ -77,6 +85,7 @@ module.exports = {
     },
     {
       Name: 'The Prestiege',
+      Poster: 'https://m.media-amazon.com/images/I/81720O+IDcL._SL1500_.jpg',
       ContentType: "Movie",
       rating: 9,
       Genre: "Magic",
@@ -85,6 +94,7 @@ module.exports = {
     },
     {
       Name: 'The Simpsons',
+      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
       ContentType: "Series",
       rating: 10,
       Genre: "Comedy",

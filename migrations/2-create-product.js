@@ -16,6 +16,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      Poster: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       Rating: {
         type: Sequelize.FLOAT
       },
