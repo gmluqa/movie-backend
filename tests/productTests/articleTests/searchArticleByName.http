@@ -1,0 +1,2 @@
+// Searches with name *th*
+GET http://localhost:3000/product/articles/name/th

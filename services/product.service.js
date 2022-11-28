@@ -98,6 +98,20 @@ const seriesGetTheatrePass = async () => {
     return seriesTheatrePass
 }
 
+const articlesGetByName = async (name) => {
+    const searchResults = await models.Product.findAll({
+        where: {
+
+            Name: {
+                [Op.like]: `%${name}%`
+            }
+
+
+        }
+    })
+    return searchResults
+}
+
 
 module.exports = {
     movieGetTopRated,
@@ -108,5 +122,6 @@ module.exports = {
     seriesGetById,
     seriesGetByName,
     seriesGetWithNextEpWeek,
-    seriesGetTheatrePass
+    seriesGetTheatrePass,
+    articlesGetByName
 }
