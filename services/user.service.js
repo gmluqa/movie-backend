@@ -75,6 +75,14 @@ const deleteUser = async (id) => {
     return
 }
 
+const getUserByEmail = async (email) =>{
+    const userByEmail = await models.User.findOne({
+        where: {Email : email,
+        ContentType : "User"
+        }
+    })
+        return userByEmail
+}
 module.exports = {
     registerUser,
     getDetails,
@@ -82,6 +90,7 @@ module.exports = {
     bcryptCompare,
     modifyUserDetails,
     hashPassword,
-    deleteUser
+    deleteUser,
+    getUserByEmail
 }
 

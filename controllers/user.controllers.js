@@ -5,7 +5,8 @@ const {
     logInUser,
     bcryptCompare,
     modifyUserDetails,
-    deleteUser
+    deleteUser,
+    getUserByEmail,
 } = require("../services/user.service.js")
 
 const jswonwebtoken = require("jsonwebtoken")
@@ -44,15 +45,6 @@ const modifyUserDetailsController = async (req, res) => {
     }
 }
 
-const deleteUserController = async (req, res) => {
-    try {
-        let { id } = req.params
-        await deleteUser(id)
-        res.status(200).json({ message: "User succesfully deleted" })
-    } catch (error) {
-        res.status(400).json({ message: "Malformed request" })
-    }
-}
 
 const logInUserController = async (req, res) => {
     try {
@@ -80,11 +72,31 @@ const logInUserController = async (req, res) => {
         res.status(400).json({ message: "Password or Email incorrect!" })
     }
 }
+const deleteUserController = async (req, res) => {
+    try {
+        let { id } = req.params
+        await deleteUser(id)
+        res.status(200).json({ message: "User succesfully deleted" })
+    } catch (error) {
+        res.status(400).json({ message: "Malformed request" })
+    }
+}
 
+    const getByEmailController = async (req,res) => {
+        try {
+            const { Email } = req.params
+            const resp = await getUserByEmail(Email)
+            res.json(resp)
+        } catch (error) {
+            res.status(400).json({ message: "Malformed request" })
+        }
+    }
+    
 module.exports = {
     registerController,
     getDetailsController,
     modifyUserDetailsController,
     deleteUserController,
-    logInUserController
+    logInUserController,
+    getByEmailController
 }

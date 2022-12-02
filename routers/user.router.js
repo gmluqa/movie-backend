@@ -6,7 +6,8 @@ const {
     getDetailsController,
     modifyUserDetailsController,
     deleteUserController,
-    logInUserController
+    logInUserController,
+    getByEmailController
 } = require("../controllers/user.controllers.js")
 
 const {
@@ -21,5 +22,5 @@ userRouter.post("/login", logInUserController)
 userRouter.get("/getUserDetails/:id", verifyTokenMiddleware, getDetailsController)
 userRouter.patch("/modifyUserDetails/:id", verifyTokenMiddleware, modifyUserDetailsController)
 userRouter.delete("/deleteUser/:id", verifyAdminMiddleware, deleteUserController)
-
+userRouter.get("/getUserByEmail/email/:Email",verifyAdminMiddleware, getByEmailController)
 module.exports = userRouter
