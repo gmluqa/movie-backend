@@ -1,0 +1,5 @@
+// Searches with by article id 1
+GET http://localhost:3000/product/articles/id/1
+
+// Searches with by article id 6
+GET http://localhost:3000/product/articles/id/6

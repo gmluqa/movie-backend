@@ -112,6 +112,15 @@ const articlesGetByName = async (name) => {
     return searchResults
 }
 
+const articlesGetById = async (id) => {
+    const getResults = await models.Product.findOne({
+        where: {
+            id: id
+        }
+    })
+    return getResults
+}
+
 
 module.exports = {
     movieGetTopRated,
@@ -123,5 +132,6 @@ module.exports = {
     seriesGetByName,
     seriesGetWithNextEpWeek,
     seriesGetTheatrePass,
-    articlesGetByName
+    articlesGetByName,
+    articlesGetById
 }

@@ -8,7 +8,8 @@ const {
     seriesGetByName,
     seriesGetWithNextEpWeek,
     seriesGetTheatrePass,
-    articlesGetByName
+    articlesGetByName,
+    articlesGetById
 } = require("../services/product.service.js")
 
 // Serves not found message in RARE case of failed to find any top movies
@@ -124,6 +125,19 @@ const articlesGetByNameController = async (req, res) => {
     }
 }
 
+const articlesGetByIdController = async (req, res) => {
+    try {
+        const { Id } = req.params
+        const resp = await articlesGetById(Id)
+        return res.status(202).json(resp)
+    }
+    catch (error) {
+
+        console.log(error)
+        res.status(404)
+    }
+}
+
 module.exports = {
     movieGetTopRatedController,
     movieGetByIdController,
@@ -134,5 +148,6 @@ module.exports = {
     seriesGetByNameController,
     seriesGetWithNextEpWeekController,
     seriesGetTheatrePassController,
-    articlesGetByNameController
+    articlesGetByNameController,
+    articlesGetByIdController
 }

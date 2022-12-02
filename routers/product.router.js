@@ -11,7 +11,8 @@ const {
     seriesGetByNameController,
     seriesGetWithNextEpWeekController,
     seriesGetTheatrePassController,
-    articlesGetByNameController
+    articlesGetByNameController,
+    articlesGetByIdController
 } = require("../controllers/product.controller.js")
 
 // Movie endpoints
@@ -29,5 +30,6 @@ productRouter.get("/series/getTheatrePass", seriesGetTheatrePassController);
 
 //Articles endpoints
 productRouter.get("/articles/name/:Name", articlesGetByNameController)
+productRouter.get("/articles/id/:Id", articlesGetByIdController)
 
 module.exports = productRouter
