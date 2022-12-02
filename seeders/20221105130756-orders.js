@@ -62,7 +62,14 @@ module.exports = {
       Product_ID: 10,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
-    }], {});
+    },
+    {
+      User_ID: 2,
+      Product_ID: 4,
+      CreatedAt: '1998-06-10 06:40:10',
+      UpdatedAt: '1998-06-10 06:40:10'
+    },
+    ], {});
 
   },
 

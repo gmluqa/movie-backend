@@ -18,7 +18,7 @@ module.exports = {
       FirstName: 'Mary',
       LastName: 'Wilkins',
       Email: 'mary@gmail.com',
-      Password: await hashPassword('asdasd23'),
+      Password: await hashPassword('1234'),
       UserType: 'User',
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
