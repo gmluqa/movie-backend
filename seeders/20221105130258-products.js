@@ -64,8 +64,8 @@ module.exports = {
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Matrix 2',
-      Poster: 'https://pics.filmaffinity.com/Matrix_Reloaded-153250831-large.jpg',
+      Name: 'Akira',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg',
       ContentType: "Movie",
       rating: 7,
       Genre: "Psychological",
@@ -84,8 +84,8 @@ module.exports = {
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'The Prestiege',
-      Poster: 'https://m.media-amazon.com/images/I/81720O+IDcL._SL1500_.jpg',
+      Name: 'The Fist Of The North Star',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pqdyv9Z4no4cElRtbpMw17STpOH.jpg',
       ContentType: "Movie",
       rating: 9,
       Genre: "Magic",
