@@ -4,8 +4,8 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Products', [{
-      Name: 'The Lion King',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Ghost In The Shell',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/v5NNSikH5w7Bz8SDcqxLEwVD4wW.jpg',
       ContentType: "Movie",
       rating: 1,
       Genre: "Animated",
@@ -13,51 +13,51 @@ module.exports = {
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Breaking Bad',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Samurai Pizza Cats',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zQ4lohCOwaxb9T8VofAw2SkudxO.jpg',
       ContentType: "Series",
       rating: 2,
-      Genre: "Drugs",
+      Genre: "Comedy",
       EpInWeek: true,
       TheatrePass: true,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Matrix',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Ninja Scroll',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qzZEnaXwv4wss2QalEo4Uf9BAwh.jpg',
       ContentType: "Movie",
       rating: 3,
-      Genre: "Psychological",
+      Genre: "Fantasy",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Ugly Betty',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Berserk: The Golde Age - Memorial Edition (2022)',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/l5TQqMkoZ1WFsNSmbOtkN8vtniu.jpg',
       ContentType: "Series",
       rating: 4,
-      Genre: "Soap Opera",
+      Genre: "Fantasy",
       EpInWeek: false,
       TheatrePass: false,
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Finding Nemo',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Goku Midnight Eye',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hYrSpGG81TsoAi1zBusx1agQ8kO.jpg',
       ContentType: "Movie",
       rating: 5,
-      Genre: "Animated",
+      Genre: "Sci-Fiction",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Cyberpunk: Edgerunners',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'City Hunter',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/umqvjTihvYAIzVd6BAdVCCXZP5U.jpg',
       ContentType: "Series",
       rating: 6,
-      Genre: "Technological",
+      Genre: "Action",
       EpInWeek: true,
       TheatrePass: true,
       CreatedAt: '1998-06-10 06:40:10',
@@ -68,13 +68,13 @@ module.exports = {
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg',
       ContentType: "Movie",
       rating: 7,
-      Genre: "Psychological",
+      Genre: "Action",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'Rick and Morty',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Ranma 1/2',
+      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ypMxPKmZph46vBLVnrVrMV3hzLB.jpg',
       ContentType: "Series",
       rating: 8,
       Genre: "Comedy",
@@ -93,8 +93,8 @@ module.exports = {
       UpdatedAt: '1998-06-10 06:40:10'
     },
     {
-      Name: 'The Simpsons',
-      Poster: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_Carmack_E3_2006.jpg',
+      Name: 'Doomed Megalopolis',
+      Poster: 'https://i.pinimg.com/originals/3f/07/7b/3f077b9f2f2321d29a2b4edd4f2e5d1f.jpg',
       ContentType: "Series",
       rating: 10,
       Genre: "Comedy",
