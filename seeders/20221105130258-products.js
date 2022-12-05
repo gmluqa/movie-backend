@@ -7,7 +7,7 @@ module.exports = {
       Name: 'Ghost In The Shell',
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/v5NNSikH5w7Bz8SDcqxLEwVD4wW.jpg',
       ContentType: "Movie",
-      rating: 1,
+      rating: 10,
       Genre: "Animated",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -36,7 +36,7 @@ module.exports = {
       Name: 'Berserk: The Golde Age - Memorial Edition (2022)',
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/l5TQqMkoZ1WFsNSmbOtkN8vtniu.jpg',
       ContentType: "Series",
-      rating: 4,
+      rating: 8,
       Genre: "Fantasy",
       EpInWeek: false,
       TheatrePass: false,
@@ -67,7 +67,7 @@ module.exports = {
       Name: 'Akira',
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg',
       ContentType: "Movie",
-      rating: 7,
+      rating: 5,
       Genre: "Action",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -92,20 +92,12 @@ module.exports = {
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
     },
-    {
-      Name: 'The Fist Of The North Star',
-      Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pqdyv9Z4no4cElRtbpMw17STpOH.jpg',
-      ContentType: "Movie",
-      rating: 9,
-      Genre: "Magic",
-      CreatedAt: '1998-06-10 06:40:10',
-      UpdatedAt: '1998-06-10 06:40:10'
-    },
+ 
     {
       Name: 'Angels Egg',
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/s65qAjKy6JqLqQUDj3Liuih0r1D.jpg',
       ContentType: "Movie",
-      rating: 9,
+      rating: 8,
       Genre: "Magic",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -114,7 +106,7 @@ module.exports = {
       Name: 'Appleseed',
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/psYU0cYB4DaQRGg4v8Dtt7RhXfa.jpg',
       ContentType: "Movie",
-      rating: 9,
+      rating: 5,
       Genre: "Action",
       CreatedAt: '1998-06-10 06:40:10',
       UpdatedAt: '1998-06-10 06:40:10'
@@ -133,7 +125,7 @@ module.exports = {
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/efxHZF6uDCIATKVxTuobQFpJarp.jpg',
       ContentType: "Series",
       rating: 8,
-      Genre: "Comedy",
+      Genre: "Horror, Fantasy",
       EpInWeek: false,
       TheatrePass: false,
       CreatedAt: '1998-06-10 06:40:10',
@@ -144,7 +136,7 @@ module.exports = {
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/htCzmp0gEvUCc2jfQMzfbwSGN4L.jpg',
       ContentType: "Series",
       rating: 8,
-      Genre: "Comedy",
+      Genre: "Horror, fantasy",
       EpInWeek: false,
       TheatrePass: false,
       CreatedAt: '1998-06-10 06:40:10',
@@ -154,7 +146,7 @@ module.exports = {
       Name: 'Dragon Quest',
       Poster: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1ku4wBlLxMecZUoLMbxqyVexGft.jpg',
       ContentType: "Series",
-      rating: 8,
+      rating: 6,
       Genre: "Comedy",
       EpInWeek: false,
       TheatrePass: false,
