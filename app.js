@@ -10,7 +10,7 @@ const orderRouter = require("./routers/order.router.js");
 const userRouter = require("./routers/user.router.js");
 
 // Middleware
-
+app.use(cors())
 app.use(express.json())
 app.use("/product", productRouter);
 app.use("/order", orderRouter);
